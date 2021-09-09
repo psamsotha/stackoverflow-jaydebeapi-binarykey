@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  mysqlserver:
+    build:
+      context: ./mysql
+    ports:
+      - '3306:3306'
+    environment:
+      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+      - MYSQL_USER=stackoverflow
+      - MYSQL_PASSWORD=stackoverflow
+      - MYSQL_DATABASE=stackoverflow
+#    volumes:
+#      - mysql_data:/var/lib/mysql
+#      - mysql_config:/etc/mysql/conf.d
+#volumes:
+#  mysql_data:
+#  mysql_config:
